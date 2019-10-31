@@ -19,7 +19,10 @@ module.exports = {
 		const owncl = await cl.fetchUser(botowner);
 		const owner = `${owncl.tag}`;
 		if(((args[0] == 'add' || args[0] == 'a' || args[0] == 'edit' || args[0] == 'e' || args[0] == 'info' || args[0] == 'i' || args[0] == 'delete' || args[0] == 'd' || args[0] == 'raw2' || args[0] == 'r') && args.length > 1) || args[0] == 'list' || args[0] == 'l') {
-			const tag = args[1].toLowerCase();
+			let tag;
+			if(args.length > 1) {
+				tag = args[1].toLowerCase();
+			}
 			let tagDesc;
 			let icount = 2;
 			while(icount < args.length) {

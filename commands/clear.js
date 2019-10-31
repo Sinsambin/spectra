@@ -13,14 +13,14 @@ module.exports = {
                     msg.channel.send('Successfully cleared the Channel!');
                     const channel = msg.guild.channels.find(c => c.name == 'serverlog');
                     if (!channel) return;
-                    channel.send(`🗑 **#${msg.channel.name}** has been cleared by \`${msg.author.tag}(${msg.author.id})\`.`);
+                    channel.send(`🗑 **#${msg.channel.name}** has been cleared by **${oldmem.tag}(${member.id})**.`);
                 } else if((args[0].match(/^\d+$/) && (args[0] > 1) && (args[0] < 100))) {
                     const toDelete = parseInt(args[0]) + 1;
                     msg.channel.bulkDelete(toDelete, true);
                     msg.channel.send(`Successfully deleted ${toDelete - 1} messages!`);
                     const channel = msg.guild.channels.find(c => c.name == 'serverlog');
                     if (!channel) return;
-                    channel.send(`🗑 ${toDelete - 1} messages have been deleted from ${msg.channel.name} by \`${msg.author.tag} (${msg.author.id})\`.`);
+                    channel.send(`🗑 ${toDelete - 1} messages have been deleted from ${msg.channel.name} by **${oldmem.tag}(${member.id})**.`);
                 } else{
                     msg.channel.send('❌ Wrong amount of messages to be deleted. The amount must be a number between 2 and 99.');
                 }

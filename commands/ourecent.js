@@ -43,11 +43,6 @@ module.exports = {
                 }
             }
             console.log(count);
-            //console.log(body);
-            //console.log(query);
-            //console.log(body[count]);
-            //console.log(body.length);
-            //console.log(count);
 
             if(foundpass) {
                 const query3 = 'http://osu.ppy.sh/api/get_beatmaps?b=' + body[count].beatmap_id + '&k=' + osuapikey;

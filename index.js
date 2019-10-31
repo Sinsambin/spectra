@@ -261,6 +261,7 @@ cl.on('disconnect', async event => {
 });
 
 cl.on('voiceStateUpdate', (oldmem, newmem) => {
+	if(oldmem.bot) return;
   const channel = oldmem.guild.channels.find(c => c.name == 'serverlog');
 	// if(!channel || oldmem.voiceChannel.name == newmem.voiceChannel.name)return;
   if(!oldmem.voiceChannel && newmem.voiceChannel) {
