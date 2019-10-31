@@ -1,5 +1,5 @@
-/node-modules/
 .eslintrc.json
 config.json
 database.sqlite
 node_modules
+banned-users.json
