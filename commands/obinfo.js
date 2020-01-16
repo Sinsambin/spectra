@@ -62,7 +62,7 @@ module.exports = {
                     .addField('Beatmap Name', bmname, true)
                     .addField('Mapper', body[0].creator, true)
                     .addBlankField(false)
-                    .addField('User Rating', body[0].rating, true)
+                    .addField('User Rating', (1 * body[0].rating).toFixed(1), true)
                     .addField('BPM', Math.round(body[0].bpm), true);
                     if(rstatus == 1) {
                         resultEmbed.addField('Ranked since', rankedsince.substring(8, 10) + '.' + rankedsince.substring(5, 7) + '.' + rankedsince.substring(0, 4), true);
