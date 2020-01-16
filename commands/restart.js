@@ -5,6 +5,7 @@ module.exports = {
     args: false,
     ownerOnly: true,
     usage: '',
+	hidden: true,
     aliases: ['shutdown'],
 	// eslint-disable-next-line no-unused-vars
 	execute(msg, args, cl) {
